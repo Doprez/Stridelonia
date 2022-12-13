@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 using Avalonia.Threading;
 using Stride.Core;
@@ -57,7 +58,7 @@ namespace Stridelonia
                 throw new InvalidOperationException("Call from invalid thread");
         }
 
-        public void Post(Action action, DispatcherPriority priority = DispatcherPriority.Normal)
+        public void Post(Action action, DispatcherPriority priority = default)
         {
             if (CheckAccess())
                 action();
@@ -65,7 +66,7 @@ namespace Stridelonia
                 _taskqueue.Enqueue(new Task(action));
         }
 
-        public Task InvokeAsync(Action action, DispatcherPriority priority = DispatcherPriority.Normal)
+        public Task InvokeAsync(Action action, DispatcherPriority priority = default)
         {
             var task = new Task(action);
             if (CheckAccess())
@@ -75,7 +76,7 @@ namespace Stridelonia
             return task;
         }
 
-        public Task<TResult> InvokeAsync<TResult>(Func<TResult> function, DispatcherPriority priority = DispatcherPriority.Normal)
+        public Task<TResult> InvokeAsync<TResult>(Func<TResult> function, DispatcherPriority priority = default)
         {
             var task = new Task<TResult>(function);
             if (CheckAccess())
@@ -85,7 +86,7 @@ namespace Stridelonia
             return task;
         }
 
-        public Task InvokeAsync(Func<Task> function, DispatcherPriority priority = DispatcherPriority.Normal)
+        public Task InvokeAsync(Func<Task> function, DispatcherPriority priority = default)
         {
             var task = new Task<Task>(function);
             if (CheckAccess())
@@ -95,7 +96,7 @@ namespace Stridelonia
             return task.Unwrap();
         }
 
-        public Task<TResult> InvokeAsync<TResult>(Func<Task<TResult>> function, DispatcherPriority priority = DispatcherPriority.Normal)
+        public Task<TResult> InvokeAsync<TResult>(Func<Task<TResult>> function, DispatcherPriority priority = default)
         {
             var task = new Task<Task<TResult>>(function);
             if (CheckAccess())
@@ -105,5 +106,9 @@ namespace Stridelonia
             return task.Unwrap();
         }
 
-    }
+		public void Post(SendOrPostCallback action, object arg, DispatcherPriority priority = default)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

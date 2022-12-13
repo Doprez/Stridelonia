@@ -27,9 +27,6 @@ namespace WindowsGame.Views
             Random = random;
             WindowExtensions.SetRenderGroup(this, 31);
             this.InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
             SetRandomSizePos();
         }
 

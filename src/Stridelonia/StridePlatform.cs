@@ -31,7 +31,11 @@ namespace Stridelonia
 
         public TimeSpan DoubleClickTime => TimeSpan.FromSeconds(0.2);
 
-        public static void Initialize()
+		public Size TouchDoubleClickSize => throw new NotImplementedException();
+
+		public TimeSpan TouchDoubleClickTime => throw new NotImplementedException();
+
+		public static void Initialize()
         {
             var options = AvaloniaLocator.Current.GetService<StridePlatformOptions>();
 
@@ -75,5 +79,20 @@ namespace Stridelonia
         }
 
         public IWindowImpl CreateWindow() => new WindowImpl();
-    }
+
+		public Size GetDoubleTapSize(PointerType type)
+		{
+			return Size.Empty;
+		}
+
+		public TimeSpan GetDoubleTapTime(PointerType type)
+		{
+			return TimeSpan.Zero;
+		}
+
+		public Size GetTapSize(PointerType type)
+		{
+            return Size.Empty;
+		}
+	}
 }

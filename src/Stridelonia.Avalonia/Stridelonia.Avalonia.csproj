@@ -1,43 +1,43 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <StrideAssemblyProcessor>false</StrideAssemblyProcessor>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <LangVersion>10</LangVersion>
+	<TargetFramework>net6.0</TargetFramework>
+	<StrideAssemblyProcessor>false</StrideAssemblyProcessor>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<LangVersion>10</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>0.5-preview</Version>
-    <Authors>Jean-François Pustay</Authors>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>Stride plugin which allows running Avalonia on Stride</Description>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>Stride;Avalonia;Stridelonia;UI</PackageTags>
+	<Version>0.5-preview</Version>
+	<Authors>Jean-François Pustay</Authors>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<Description>Stride plugin which allows running Avalonia on Stride</Description>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>Stride;Avalonia;Stridelonia;UI</PackageTags>
 
-    <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
 
-    <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+	<!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
+	<EmbedUntrackedSources>true</EmbedUntrackedSources>
 
-    <!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
+	<IncludeSymbols>true</IncludeSymbols>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.13" />
-    <PackageReference Include="Stride.Core.Mathematics" Version="4.1.0.1734" />
+	<PackageReference Include="Avalonia" Version="11.0.0-preview4" />
+	<PackageReference Include="Stride.Core.Mathematics" Version="4.1.0.1734" />
 
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+	<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
   </ItemGroup>
 
   <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
   
 </Project>

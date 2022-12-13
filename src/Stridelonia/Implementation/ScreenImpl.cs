@@ -24,5 +24,20 @@ namespace Stridelonia.Implementation
 
         private readonly List<Screen> screens;
         public IReadOnlyList<Screen> AllScreens => screens;
-    }
+
+		public Screen ScreenFromWindow(IWindowBaseImpl window)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public Screen ScreenFromPoint(PixelPoint point)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public Screen ScreenFromRect(PixelRect rect)
+		{
+			throw new System.NotImplementedException();
+		}
+	}
 }
