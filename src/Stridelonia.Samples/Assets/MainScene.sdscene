@@ -94,7 +94,7 @@ Hierarchy:
                         Children: {}
                     010b7c31ed933e5a3cc449ad860736c0: !CameraComponent
                         Id: a6b203d1-f935-4b96-a1df-2c3e068a72e7
-                        Name: null
+                        Name: MainCamera
                         Projection: Perspective
                         Slot: 83d9443f-d721-4937-8cff-f193eadd74f8
                     a97ba5831ac8388a00983c16384f2645: !Stridelonia.Samples.BasicCameraController,Stridelonia.Samples

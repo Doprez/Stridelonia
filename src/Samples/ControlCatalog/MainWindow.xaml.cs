@@ -17,7 +17,6 @@ namespace ControlCatalog
         public MainWindow()
         {
             this.InitializeComponent();
-            this.AttachDevTools();
             //Renderer.DrawFps = true;
             //Renderer.DrawDirtyRects = Renderer.DrawFps = true;
 
