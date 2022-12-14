@@ -18,7 +18,7 @@ For documentation and usage, go to the [wiki](https://github.com/TheKeyblader/St
 
 ## Requirements
 
--   [.NET 5](https://dotnet.microsoft.com/download/dotnet/5.0)
+-   [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 ## Current status:
 
