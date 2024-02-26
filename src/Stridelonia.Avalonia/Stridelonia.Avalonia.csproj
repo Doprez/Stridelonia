@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <StrideAssemblyProcessor>false</StrideAssemblyProcessor>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
@@ -27,16 +27,7 @@
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.13" />
-    <PackageReference Include="Stride.Core.Mathematics" Version="4.1.0.1459-beta" />
-
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Stride.Core.Mathematics" Version="4.2.0.2067" />
   </ItemGroup>
-
-  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  </PropertyGroup>
   
 </Project>

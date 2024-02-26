@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
@@ -23,7 +23,6 @@
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.13" />
     <PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.13" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.13" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Stridelonia.Avalonia\Stridelonia.Avalonia.csproj" />
