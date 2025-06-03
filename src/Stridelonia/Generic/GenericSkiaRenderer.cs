@@ -52,11 +52,6 @@ namespace Stridelonia.Generic
             public void Dispose()
             {
                 var pixels = SkSurface.PeekPixels();
-                SetTexture(pixels.GetPixels(), pixels.RowBytes * pixels.Height);
-            }
-
-            private void SetTexture(IntPtr pixels, int size)
-            {
                 if (_renderData.Texture == null) return;
                 var copyTask = StrideDispatcher.StrideThread.InvokeAsync(() =>
                 {
@@ -64,7 +59,7 @@ namespace Stridelonia.Generic
                     var device = game.GraphicsDevice;
                     var context = game.GraphicsContext;
 
-                    _renderData.Texture.SetData(context.CommandList, new DataPointer(pixels, size));
+                    _renderData.Texture.SetData(context.CommandList, pixels.GetPixelSpan<byte>());
                 });
                 if (_waitCopy) copyTask.Wait();
             }

@@ -7,6 +7,8 @@ namespace Stridelonia
         protected override void BeginRun()
         {
             base.BeginRun();
+            //breaks input when resized
+            //Window.AllowUserResizing = true;
             StrideloniaApplication.Start(this);
         }
 

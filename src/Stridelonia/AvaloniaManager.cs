@@ -22,7 +22,7 @@ namespace Stridelonia
 
         private static Thread _avaloniaThread;
         private static bool _isInitialize;
-        private static bool _stop;
+        //private static bool _stop;
 
         public static StridePlatformOptions Options { get; }
 

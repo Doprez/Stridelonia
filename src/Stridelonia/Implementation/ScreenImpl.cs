@@ -2,7 +2,6 @@
 using Avalonia;
 using Avalonia.Platform;
 using Stride.Games;
-using Stride.Graphics;
 
 namespace Stridelonia.Implementation
 {
@@ -24,5 +23,20 @@ namespace Stridelonia.Implementation
 
         private readonly List<Screen> screens;
         public IReadOnlyList<Screen> AllScreens => screens;
+
+        public Screen ScreenFromWindow(IWindowBaseImpl window)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Screen ScreenFromPoint(PixelPoint point)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Screen ScreenFromRect(PixelRect rect)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

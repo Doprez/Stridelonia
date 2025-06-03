@@ -1,6 +1,3 @@
-using System.Diagnostics;
-using Stride.Engine;
-
 namespace Stridelonia.Samples
 {
     class Stridelonia_SamplesApp

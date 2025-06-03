@@ -26,7 +26,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.13" />
+    <PackageReference Include="Avalonia" Version="0.10.22" />
     <PackageReference Include="Stride.Core.Mathematics" Version="4.2.0.2381" />
   </ItemGroup>
   
